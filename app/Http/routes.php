@@ -10,7 +10,10 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+//Route::get('/', 'HomeController@index');
 
-Route::get('/', function () {
-    return view('welcome');
+Route::group(['prefix' => 'camp'], function () {
+    Route::get('list.json', 'Campaigns\CampaignsController@getCamps');//获取campaigns列表
+    Route::put('lp.json', 'Campaigns\CampaignsController@putLP');//修改LP内容
 });
+
