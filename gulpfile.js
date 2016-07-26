@@ -1,3 +1,9 @@
+var gulp = require('gulp');
+var sass = require("gulp-sass");
+var minifyCss = require('gulp-minify-css');
+var requirejsOptimize = require("gulp-requirejs-optimize");
+var uglify = require('gulp-uglify');
+var minifyHTML = require('gulp-minify-html');
 var elixir = require('laravel-elixir');
 
 /*
